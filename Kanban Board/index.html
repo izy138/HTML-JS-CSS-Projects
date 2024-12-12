@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Titillium Web font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" />
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="head">
+        <h1>Kanban Board</h1>
+    </div>
+    <div class="board">
+        <!--TODO -->
+        <div class="column" id="to-do" ondrop="drop(event,'to-do')" ondragover="allowDrop(event)">
+            <h2>To-Do</h2>
+            <hr />
+            <div class="task-in-ctn">
+                <input type="text" id="taskInput" class="task-input" placeholders="input task..."
+                    oninput="console.log('capitalize')" />
+                <botton class="add-task-btn" onclick="addTask('to-do')">
+                    add task
+                </botton>
+            </div>
+            <div class="task-container">
+            </div>
+        </div>
+        <!--IN PROGRESS -->
+        <div class="column" id="in-progress" ondrop="drop(event,'in-progress')" ondragover="allowDrop(event)">
+            <h2>In-Progress</h2>
+            <hr />
+            <div class="task-container">
+            </div>
+        </div>
+        <!-- DONE -->
+        <div class="column" id="done" ondrop="drop(event,'done')" ondragover="allowDrop(event)">
+            <h2>Done</h2>
+            <hr />
+            <div class="task-container">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,182 @@
+/* style.css */
+body {
+    font-family: "Titillium Web", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #75cbb7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .head {
+    background-color: #d19475;
+    color: #852a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(255, 239, 205, 0.2);
+  }
+  
+  .head img {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .head h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .column {
+    /* width: 30%; */
+    width: calc(100% - 30px);
+    max-width: 400px;
+    margin: 10px;
+    background-color: #4da899;
+    /* bcdc89 DARKER AQUA*/
+    /* 3eb4a0  PRETTY LIGHT GREEN */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 7px rgb(0, 129, 118);
+  }
+  .column:hover {
+    background-color: #bcdc89;
+    transition: background-color 0.5s;
+
+    /* #3eb4a0; */
+  }
+  
+  .column h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2f2f30dd;
+  }
+  
+  .task-input {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* margin-left: 38px; */
+  }
+  
+  .task {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: move;
+  }
+  
+  .delete-btn {
+    float: right;
+    cursor: pointer;
+  }
+  
+  .add-task-btn {
+    background-color: #75cbb7;
+    /* 59a30e70 */
+    /* 3eb4a0 */
+    /*#4caf50;*/
+    border: none;
+    color: rgb(59, 59, 59);
+    padding: 4px;
+
+    /* Adjust padding to make 
+    the button smaller */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; width: 60px; height: 23px; padding: 3px;
+    /* display: inline-block; */
+    font-size: 14px;
+    font-weight : bold;
+    /* Decrease font size */
+    border-radius: 6px;
+    /* Adjust border radius 
+    for a softer look */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-task-btn:hover {
+    background-color: #7bb43e;
+  }
+  
+  #todo .task {
+    background-color: #f8ffd7;
+    border: none;
+
+
+    /* #b3e5fc */
+    /* Light blue */
+  }
+
+  #todo .task:hover {
+    background-color: #e1fe8b;
+    transition: background-color 0.3s;
+
+    /* #3eb4a0; */
+  }
+
+  #in-progress .task {
+    background-color: #ffe0c8;
+    border: none;
+    /* #ffcdd2 */
+    /* Light pink */
+  }
+  
+  #in-progress .task:hover {
+    background-color: #fec08b;
+    transition: background-color 0.3s;
+
+    /* #3eb4a0; */
+  }
+  
+  #done .task {
+    border: none;
+    background-color: #f8ffd7;
+    /* #c8e6c9 */
+    /* Light green */
+  }
+  
+  
+  #done .task:hover {
+    background-color: #e1fe8b;
+    transition: background-color 0.3s;
+
+    /* #3eb4a0; */
+  }
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: move;
+    
+  }
+  
+  .delete-btn {
+    float: right;
+  
+    cursor: pointer;
+  }
+  
+  .tasks-in-ctn {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3px;
+    
+  }
+  
