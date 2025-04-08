@@ -1,182 +1,440 @@
-/* style.css */
+/* style.css - Dark Green-Blue Mode */
 body {
-    font-family: "Titillium Web", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #75cbb7;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .head {
-    background-color: #d19475;
-    color: #852a00;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-shadow: 0px 2px 5px rgba(255, 239, 205, 0.2);
-  }
-  
-  .head img {
-    width: 50px;
-    margin-right: 10px;
-  }
-  
-  .head h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  .board {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .column {
-    /* width: 30%; */
-    width: calc(100% - 30px);
-    max-width: 400px;
-    margin: 10px;
-    background-color: #4da899;
-    /* bcdc89 DARKER AQUA*/
-    /* 3eb4a0  PRETTY LIGHT GREEN */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 2px 7px rgb(0, 129, 118);
-  }
-  .column:hover {
-    background-color: #bcdc89;
-    transition: background-color 0.5s;
+  font-family: "Titillium Web", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #0a232f;
+  margin: 0;
+  padding: 0;
+  color: #e6f1ff;
+}
 
-    /* #3eb4a0; */
-  }
-  
-  .column h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #2f2f30dd;
-  }
-  
-  .task-input {
-    width: 60%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    /* margin-left: 38px; */
-  }
-  
-  .task {
-    background-color: #e0e0e0;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    cursor: move;
-  }
-  
-  .delete-btn {
-    float: right;
-    cursor: pointer;
-  }
-  
-  .add-task-btn {
-    background-color: #75cbb7;
-    /* 59a30e70 */
-    /* 3eb4a0 */
-    /*#4caf50;*/
-    border: none;
-    color: rgb(59, 59, 59);
-    padding: 4px;
+.head {
+  background-color: #112c40;
+  color: #49b1ab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
 
-    /* Adjust padding to make 
-    the button smaller */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block; width: 60px; height: 23px; padding: 3px;
-    /* display: inline-block; */
-    font-size: 14px;
-    font-weight : bold;
-    /* Decrease font size */
-    border-radius: 6px;
-    /* Adjust border radius 
-    for a softer look */
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .add-task-btn:hover {
-    background-color: #7bb43e;
-  }
-  
-  #todo .task {
-    background-color: #f8ffd7;
-    border: none;
+.head img {
+  width: 50px;
+  margin-right: 10px;
+}
 
+.head h1 {
+  font-size: 24px;
+  margin: 0;
+}
 
-    /* #b3e5fc */
-    /* Light blue */
-  }
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
 
-  #todo .task:hover {
-    background-color: #e1fe8b;
-    transition: background-color 0.3s;
+.column {
+  width: calc(100% - 30px);
+  max-width: 400px;
+  margin: 10px;
+  background-color: #173845;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+}
 
-    /* #3eb4a0; */
-  }
+.column:hover {
+  background-color: #1d4a5c;
+  transition: background-color 0.5s;
+}
 
-  #in-progress .task {
-    background-color: #ffe0c8;
-    border: none;
-    /* #ffcdd2 */
-    /* Light pink */
-  }
-  
-  #in-progress .task:hover {
-    background-color: #fec08b;
-    transition: background-color 0.3s;
+.column h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #49b1ab;
+}
 
-    /* #3eb4a0; */
-  }
-  
-  #done .task {
-    border: none;
-    background-color: #f8ffd7;
-    /* #c8e6c9 */
-    /* Light green */
-  }
-  
-  
-  #done .task:hover {
-    background-color: #e1fe8b;
-    transition: background-color 0.3s;
+hr {
+  border-color: #5099a0;
+}
 
-    /* #3eb4a0; */
+.task-input {
+  width: 40%;
+  padding: 8px;
+  border: 1px solid #2d3f58;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #0d1d33;
+  color: #e6fffb;
+}
+
+.due-date-input {
+  padding: 8px;
+  border: 1px solid #2d3f58;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #0d1d33;
+  color: #67778d;
+}
+
+.task-priority-select {
+  padding: 2px 4px;
+  border: 1px solid #2d3f58;
+  border-radius: 3px;
+  font-size: 12px;
+  background-color: #0d1d33;
+  color: #9098a2;
+  width: 100%;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2d3f58;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: move;
+  position: relative;
+  min-height: 80px;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+/* Dropdown styling */
+.task-dropdown {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 35px;
+  background-color:  #173845;
+  border: 1px solid #2d3f58;
+  border-radius: 5px;
+  padding: 10px;
+  width: 180px;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: visible; /* Allow the date picker to overflow */
+}
+
+.dropdown-section {
+  margin-bottom: 12px;
+}
+
+.dropdown-section:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-label {
+  font-weight: bold;
+  font-size: 12px;
+  color: #60beb7;
+  margin-bottom: 3px;
+}
+
+.task-due-date-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #2d3f58;
+  border-radius: 3px;
+  background-color: #0d1d33;
+  color: #6f798a;
+  font-size: 12px;
+  position: relative;
+  z-index: 101; /* Higher than dropdown */
+}
+
+/* Fix for date input in dropdown */
+input[type="date"] {
+  position: relative;
+  cursor: pointer;
+  z-index: 101; /* Ensure calendar appears on top */
+}
+
+/* Style the calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: #64ffda;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 15px;
+  opacity: 0.6;
+  position: absolute;
+  right: 5px;
+  z-index: 102; /* Ensure the icon is clickable */
+}
+
+/* Date input wrapper to help with positioning */
+.date-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* For Firefox */
+@-moz-document url-prefix() {
+  .task-due-date-input {
+    width: 100% !important;
   }
-  .task {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 5px;
-    cursor: move;
-    
-  }
-  
-  .delete-btn {
-    float: right;
-  
-    cursor: pointer;
-  }
-  
-  .tasks-in-ctn {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 3px;
-    
-  }
-  
+}
+
+.task-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.toggle-details-btn {
+  background: none;
+  border: none;
+  color: #64ffda;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.details-section {
+  margin-bottom: 12px;
+}
+
+.details-label {
+  font-weight: bold;
+  font-size: 12px;
+  color: #a8b2d1;
+  margin-bottom: 3px;
+}
+
+.task-content-input {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #e6f1ff;
+  background-color: rgba(19, 47, 76, 0.5);
+  border: 1px solid #2d3f58;
+  border-radius: 4px;
+  padding: 4px 8px;
+  width: calc(100% - 50px); /* Leave space for the controls */
+  font-family: inherit;
+}
+
+.task-description {
+  font-size: 14px;
+  color: #a8b2d1;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  min-height: 20px;
+  cursor: text;
+  padding: 5px;
+  border: 1px dashed transparent;
+  transition: border-color 0.2s;
+}
+
+.task-description:hover {
+  border-color: #2d3f58;
+  background-color: rgba(19, 47, 76, 0.5);
+}
+
+.task-description:empty::before {
+  content: "Description...";
+  color: #718096;
+  font-style: italic;
+}
+
+.task-description-textarea {
+  width: calc(100% - 20px);
+  min-height: 60px;
+  padding: 5px;
+  margin: 0 10px 8px 10px;
+  border: 1px solid #2d3f58;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+  font-family: inherit;
+  color: #e6f1ff;
+  background-color: #0d1d33;
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+.add-task-btn {
+  background-color: #2a9d8f;
+  border: none;
+  color: #e6f1ff;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; 
+  width: 100px; 
+  height: 30px; 
+  padding: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+  background-color: #3ab7a9;
+}
+
+#to-do .task {
+  background-color: #0e2d39;
+  border: none;
+}
+
+#to-do .task:hover {
+  background-color: #113c48;
+  transition: background-color 0.3s;
+}
+
+#in-progress .task {
+  background-color: #0e2d39;
+  border: none;
+}
+
+#in-progress .task:hover {
+  background-color: #113c48;
+  transition: background-color 0.3s;
+}
+
+#done .task {
+  border: none;
+  background-color: #0e2d39;
+}
+
+#done .task:hover {
+  background-color: #113c48;
+  transition: background-color 0.3s;
+}
+
+.priority-indicator {
+  width: 4px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.priority-low {
+  background-color: #2a9d8f;
+}
+
+.priority-medium {
+  background-color: #e9c46a;
+}
+
+.priority-high {
+  background-color: #ff3300;
+}
+
+.task-content {
+  margin-left: 10px;
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 16px;
+  color: #e6f1ff;
+}
+
+.task-due-date {
+  font-size: 14px;
+  color: #a8b2d1;
+  margin-top: 4px;
+  margin-left: 10px;
+}
+
+.due-date-overdue {
+  color: #e76f51;
+  font-weight: bold;
+}
+
+.task-in-ctn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  gap: 5px;
+}
+
+/* Delete Confirmation Popup Styling */
+.delete-confirmation-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 47, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirmation-message {
+  background-color: #1d3a5c;
+  border-radius: 8px 8px 0 0;
+  padding: 20px;
+  font-size: 16px;
+  max-width: 350px;
+  width: 90%;
+  text-align: center;
+  color: #e6f1ff;
+  border: 1px solid #2d3f58;
+  border-bottom: none;
+}
+
+.confirmation-buttons {
+  display: flex;
+  background-color: #172a45;
+  border-radius: 0 0 8px 8px;
+  max-width: 350px;
+  width: 90%;
+  border: 1px solid #2d3f58;
+  border-top: none;
+}
+
+.confirmation-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.cancel-delete-btn {
+  background-color: #112240;
+  color: #64ffda;
+  border-radius: 0 0 0 8px;
+}
+
+.cancel-delete-btn:hover {
+  background-color: #1d3a5c;
+}
+
+.confirm-delete-btn {
+  background-color: #e76f51;
+  color: white;
+  border-radius: 0 0 8px 0;
+}
+
+.confirm-delete-btn:hover {
+  background-color: #f94e2a;
+}
