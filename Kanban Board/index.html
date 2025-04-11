@@ -19,34 +19,75 @@
     <div class="board">
         <!--TODO -->
         <div class="column" id="to-do" ondrop="drop(event,'to-do')" ondragover="allowDrop(event)">
-            <h2>To-Do</h2>
-            <hr />
-            <div class="task-in-ctn">
-                <input type="text" id="taskInput" class="task-input" placeholder="Input task..." />
-                <input type="date" id="dueDateInput" class="due-date-input" />
-                <button class="add-task-btn" onclick="addTask('to-do')">
-                    Add
-                </button>
+            <div class="column-header">
+                <h2>To-Do</h2>
+                <button id="createTaskBtn" class="create-task-btn">+ Create Task</button>
             </div>
+            <hr />
             <div class="task-container">
+                <!-- Tasks will appear here -->
             </div>
         </div>
+        
         <!--IN PROGRESS -->
         <div class="column" id="in-progress" ondrop="drop(event,'in-progress')" ondragover="allowDrop(event)">
             <h2>In-Progress</h2>
             <hr />
             <div class="task-container">
+                <!-- Tasks will appear here -->
             </div>
         </div>
+        
         <!-- DONE -->
         <div class="column" id="done" ondrop="drop(event,'done')" ondragover="allowDrop(event)">
             <h2>Done</h2>
             <hr />
             <div class="task-container">
+                <!-- Tasks will appear here -->
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Task Creation Modal -->
+    <div id="taskModal" class="task-modal">
+        <div class="task-modal-content">
+            <div class="modal-header">
+                <h3>Create New Task</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="modalTaskInput">Task Name:</label>
+                    <input type="text" id="modalTaskInput" class="modal-input" placeholder="Enter task name..." />
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalDescriptionInput">Description:</label>
+                    <textarea id="modalDescriptionInput" class="modal-textarea" placeholder="Enter description..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalPriorityInput">Priority:</label>
+                    <select id="modalPriorityInput" class="modal-select">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalDueDateInput">Due Date:</label>
+                    <input type="date" id="modalDueDateInput" class="modal-input" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelTaskBtn" class="cancel-modal-btn">Cancel</button>
+                <button id="saveTaskBtn" class="save-modal-btn">Create Task</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>
